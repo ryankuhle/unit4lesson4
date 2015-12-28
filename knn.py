@@ -1,10 +1,12 @@
 import pandas as pd
 import matplotlib.pylab as plt
+import random
 
+'''
 COLS = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
 iris_data = pd.read_csv('iris.csv', names=COLS)
 
-#Create scatterplot of sepal_length by sepal_width colored by class
+# Create scatterplot of sepal_length by sepal_width colored by class
 color_dict = {'Iris-setosa':'red',
               'Iris-versicolor':'blue',
               'Iris-virginica':'green'}
@@ -18,11 +20,15 @@ p2 = plt.Rectangle((0, 0), 0.1, 0.1, fc=color_dict['Iris-versicolor'])
 p3 = plt.Rectangle((0, 0), 0.1, 0.1, fc=color_dict['Iris-virginica'])
 plt.legend((p1, p2, p3), ('Iris-setosa', 'Iris-versicolor', 'Iris-virginica'), loc='best')
 plt.show()
+'''
 
+# Random point for plotting
+random_x = random.uniform(1.5, 5.0)
+random_y = random.uniform(4.0, 8.5)
+
+# Sort each point by its distance from the new point, and subset the 10 nearest points.
 
 '''
-Pick a new point, programmatically at random.
-
 Sort each point by its distance from the new point, and subset the 10 nearest points.
 
 Determine the majority class of the subset.
