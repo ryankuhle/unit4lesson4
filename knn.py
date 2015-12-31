@@ -42,13 +42,10 @@ iris_data = iris_data.sort(['distance'], ascending=True)
 
 def knn(k):
     subset = iris_data[0:k]
-    subset = subset.iris_class.value_counts().sort_index()
-    print subset
-    #return subset
+    subset = subset.iris_class.value_counts()
+    return subset.index.values[0]
 
-k = 25
-knn(k)
-# majority_class = knn(k)
+k = 11
+majority_class = knn(k)
 
-
-#print "Your point with coordinates: %s, %s likely belongs to the class: %s, based on %s known neighbors." % (random_x, random_y, majority_class, k)
+print "Your point with coordinates: %s, %s likely belongs to the class: %s, based on %s known neighbors." % (random_x, random_y, majority_class, k)
